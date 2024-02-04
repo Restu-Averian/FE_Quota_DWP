@@ -12,12 +12,19 @@ const Thropy = ({ value }) => {
         name: "Silver",
         color: "grey",
       };
+    } else if (value > 1000) {
+      return {
+        name: "Platinum",
+        color: "cyan",
+      };
     }
     return {
       name: "Bronze",
       color: "orange",
     };
   }, [value]);
+
+  console.log("s : ", thropyData, value);
 
   return (
     <Space>
