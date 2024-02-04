@@ -51,6 +51,7 @@ const Header = () => {
 
         <Tooltip title={loginState?.customerName}>
           <Avatar
+            size={64}
             style={{ cursor: "pointer" }}
             onClick={() => {
               navigate("/");
