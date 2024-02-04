@@ -1,0 +1,93 @@
+{
+  "customer": [
+    {
+      "id": "1",
+      "customerName": "Admin",
+      "quotaAmount": 1921168,
+      "credit": 636149,
+      "period": 100,
+      "phoneNumber": "123",
+      "password": "123",
+      "role": 1,
+      "point": 250,
+      "purchaseCount": 0
+    },
+    {
+      "id": "2",
+      "customerName": "Restu",
+      "quotaAmount": 2117776,
+      "credit": 440149,
+      "period": 144,
+      "phoneNumber": "082391365098",
+      "password": "123",
+      "role": 0,
+      "point": 100,
+      "purchaseCount": 1
+    },
+    {
+      "id": "3",
+      "customerName": "Vina",
+      "quotaAmount": 147456,
+      "credit": 41000,
+      "period": 7,
+      "phoneNumber": "082134591389",
+      "password": "123",
+      "role": 0,
+      "point": 0,
+      "purchaseCount": 0
+    }
+  ],
+  "transaction": [
+    {
+      "id": "4288",
+      "customer_id": "2",
+      "customerName": "Restu",
+      "quotaAmount": 2117776,
+      "point": 100,
+      "period": 144,
+      "price": 114000
+    }
+  ],
+  "quota": [
+    {
+      "id": "1",
+      "quotaAmount": 196608,
+      "price": 114000,
+      "period": 30,
+      "purchaseCount": 1,
+      "point": 100
+    },
+    {
+      "id": "2",
+      "quotaAmount": 147456,
+      "price": 41000,
+      "period": 7,
+      "purchaseCount": 0,
+      "point": 50
+    },
+    {
+      "id": "3",
+      "quotaAmount": 197456,
+      "price": 50000,
+      "period": 7,
+      "purchaseCount": 0,
+      "point": 50
+    },
+    {
+      "id": "4",
+      "quotaAmount": 197456,
+      "price": 50000,
+      "period": 7,
+      "purchaseCount": 0,
+      "point": 30
+    },
+    {
+      "id": "5",
+      "quotaAmount": 120456,
+      "price": 58000,
+      "period": 7,
+      "purchaseCount": 0,
+      "point": 20
+    }
+  ]
+}
