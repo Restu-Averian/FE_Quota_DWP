@@ -47,3 +47,20 @@ npm  start
 ```
 
 project will run in http://localhost:5173/ or http://localhost:5174/
+
+## Credential
+
+- Customer
+
+(Restu)
+phoneNumber: 082391365098 <br />
+password:123
+
+(Vina)
+phoneNumber: 082134591389 <br />
+password:123
+
+- Admin
+
+phoneNumber: 123 <br />
+password:123
