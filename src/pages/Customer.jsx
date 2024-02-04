@@ -13,7 +13,7 @@ function Customer() {
         <Listing
           pagination={false}
           endpoint="customer"
-          customFilter={[<Input key={1} placeholder="Search Customer Name" />]}
+          // customFilter={[<Input key={1} placeholder="Search Customer Name" />]}
         >
           <Listing.Column title="Customer Name" dataIndex="customerName" />
           <Listing.Column title="Phone Number" dataIndex="phoneNumber" />

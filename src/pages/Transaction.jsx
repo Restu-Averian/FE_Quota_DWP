@@ -12,7 +12,7 @@ function Transaction() {
         <Listing
           endpoint="transaction"
           pagination={false}
-          customFilter={[<Input key={1} placeholder="Search Customer Name" />]}
+          // customFilter={[<Input key={1} placeholder="Search Customer Name" />]}
         >
           <Listing.Column title="Customer Name" dataIndex="customerName" />
           <Listing.Column
