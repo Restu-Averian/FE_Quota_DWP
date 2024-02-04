@@ -1,8 +1,49 @@
-# React + Vite
+# Quota DWP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How To Install
 
-Currently, two official plugins are available:
+- Clone Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone https://github.com/Restu-Averian/FE_Quota_DWP.git
+```
+
+- Open Project
+
+```
+cd FE_Quota_DWP
+```
+
+- Install Dependencies
+
+```
+npm i
+```
+
+If having problem with dependencies version
+
+```
+npm i --legacy-peer-deps
+```
+
+- Install json-server
+
+```
+npm i -g json-server
+```
+
+- Run JSON Server
+
+```
+json-server --watch db.json
+```
+
+json-server will run in http://localhost:3000
+
+- Run the project
+
+```
+npm  start
+```
+
+project will run in http://localhost:5173/ or http://localhost:5174/
