@@ -5,6 +5,7 @@ import useLogin from "../../../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 import { useEffect, useState } from "react";
+import { formatQuota } from "../../../helpers/index";
 
 const { Text } = Typography;
 const Header = () => {
@@ -47,6 +48,13 @@ const Header = () => {
               Rp <CountUp end={loginState?.credit} duration={0.8} />
             </div>
             <Thropy value={loginState?.point} />
+            <div>
+              <CountUp
+                end={formatQuota(loginState?.quotaAmount)}
+                duration={0.8}
+              />{" "}
+              GB
+            </div>
           </>
         )}
 
