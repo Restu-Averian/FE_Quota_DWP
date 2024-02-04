@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
             }
           >
             <Menu
-              onSelect={({ key }) => {
+              onClick={({ key }) => {
                 navigate(key);
               }}
               mode="inline"
