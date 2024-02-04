@@ -13,6 +13,7 @@ function Customer() {
         <Listing
           pagination={false}
           endpoint="customer"
+          customFetch={(data) => data?.filter((d) => d?.role !== 1)}
           // customFilter={[<Input key={1} placeholder="Search Customer Name" />]}
         >
           <Listing.Column title="Customer Name" dataIndex="customerName" />
