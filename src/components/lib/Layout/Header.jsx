@@ -56,7 +56,7 @@ const Header = () => {
               navigate("/");
             }}
           >
-            PP
+            {loginState?.customerName}
           </Avatar>
         </Tooltip>
       </Space>
