@@ -3,33 +3,15 @@ import CountUp from "react-countup";
 import Thropy from "../thropy/Thropy";
 import useLogin from "../../../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
-import useFetch from "../../../hooks/useFetch";
-import { useEffect, useState } from "react";
 import { formatQuota } from "../../../helpers/index";
+import useGetUserInfo from "../../../hooks/useGetUserInfo";
 
 const { Text } = Typography;
 const Header = () => {
-  const { loginInfo, isAdmin, onLogOut } = useLogin();
+  const { isAdmin, onLogOut } = useLogin();
   const navigate = useNavigate();
 
-  const [loginState, setLoginState] = useState({});
-
-  const fetch = useFetch();
-
-  const getUserInfo = () => {
-    fetch(
-      {
-        method: "GET",
-      },
-      `customer/?id=${loginInfo?.id}`
-    )?.then(({ data }) => {
-      setLoginState(data?.[0]);
-    });
-  };
-
-  useEffect(() => {
-    getUserInfo();
-  }, [window.location.pathname]);
+  const { loginState } = useGetUserInfo();
 
   return (
     <Flex
