@@ -1,4 +1,4 @@
-import { Avatar, Flex, Image, Space, Tooltip } from "antd";
+import { Avatar, Dropdown, Flex, Image, Space, Typography } from "antd";
 import CountUp from "react-countup";
 import Thropy from "../thropy/Thropy";
 import useLogin from "../../../hooks/useLogin";
@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 import { useEffect, useState } from "react";
 
+const { Text } = Typography;
 const Header = () => {
-  const { loginInfo, isAdmin } = useLogin();
+  const { loginInfo, isAdmin, onLogOut } = useLogin();
   const navigate = useNavigate();
 
   const [loginState, setLoginState] = useState({});
@@ -49,17 +50,37 @@ const Header = () => {
           </>
         )}
 
-        <Tooltip title={loginState?.customerName}>
-          <Avatar
-            size={64}
-            style={{ cursor: "pointer" }}
-            onClick={() => {
-              navigate("/");
-            }}
-          >
+        <Text>{loginState?.customerName}</Text>
+        <Dropdown
+          trigger={["click"]}
+          menu={{
+            items: [
+              {
+                label: "Profile",
+                key: "/profile",
+                onClick: () => {
+                  navigate("/");
+                },
+              },
+              { type: "divider" },
+              {
+                label: "Logout",
+                key: "/logout",
+                style: {
+                  backgroundColor: "#ff4d4f",
+                  color: "white",
+                },
+                onClick: () => {
+                  onLogOut();
+                },
+              },
+            ],
+          }}
+        >
+          <Avatar size={64} style={{ cursor: "pointer" }}>
             {loginState?.customerName}
           </Avatar>
-        </Tooltip>
+        </Dropdown>
       </Space>
     </Flex>
   );
